@@ -58,7 +58,7 @@ void Task29()
     {
         for (int i = 0; i < arr1.Length; i++)
             for (int j = i; j < arr1.Length; j++)
-                if (arr1[j] < Math.Abs(arr1[i]))
+                if (Math.Abs(arr1[j]) < Math.Abs(arr1[i]))
                 {
                     int temp = arr1[j];
                     arr1[j] = arr1[i];
@@ -76,11 +76,13 @@ void Task29()
                 Console.Write(arr2[i]);
         Console.WriteLine(" ]");
     }
-    printArray(fillArray());
+    int[] arrForSort = fillArray();
+    printArray(arrForSort);
     Console.WriteLine("После сортировки по модулю: ");
-    printArray(Sort(fillArray()));
+    printArray(Sort(arrForSort));
 }
 
 // Task25();
 // Task27();
 Task29();
+
